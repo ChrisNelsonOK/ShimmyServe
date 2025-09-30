@@ -1,0 +1,60 @@
+{
+  "name": "shimmy-serve",
+  "version": "1.0.0",
+  "description": "Next-gen cross-platform GUI for Shimmy AI inferencing server",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "wait-on tcp:5173 && electron .",
+    "electron-dev": "concurrently \"yarn dev\" \"wait-on tcp:5173 && electron .\"",
+    "electron-pack": "yarn build && electron-builder",
+    "preelectron-pack": "yarn build"
+  },
+  "keywords": [
+    "electron",
+    "shimmy",
+    "ai",
+    "llm",
+    "inference",
+    "gui"
+  ],
+  "author": "ShimmyServe Team",
+  "license": "MIT",
+  "dependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/uuid": "^11.0.0",
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^12.4.1",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "drizzle-orm": "^0.44.5",
+    "express": "^5.1.0",
+    "framer-motion": "^12.23.22",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.544.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.20.1",
+    "tailwind-merge": "^3.3.1",
+    "uuid": "^13.0.0",
+    "winston": "^3.17.0",
+    "ws": "^8.18.3",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.6.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.1.1",
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  }
+}
